@@ -75,7 +75,7 @@ public class TUI {
     /**
      * Read whole line as String
      *
-     * @return
+     * @return input line
      */
     public static String readLine() {
         return scanner.nextLine();
@@ -84,7 +84,7 @@ public class TUI {
     /**
      * Read Integer input
      *
-     * @return
+     * @return input int
      */
     public static int readInt() {
         String line = readLine();
@@ -104,7 +104,7 @@ public class TUI {
     /**
      * Read Float input
      *
-     * @return
+     * @return input float
      */
     public static float readFloat() {
         String line = readLine();
@@ -124,7 +124,7 @@ public class TUI {
     /**
      * Read double input
      *
-     * @return
+     * @return input double
      */
     public static double readDouble() {
         String line = readLine();
@@ -149,8 +149,8 @@ public class TUI {
      * 2) Entry2<br>
      * 3) Entry3<br>
      *
-     * @param name
-     * @param entries
+     * @param name Menutitle
+     * @param entries Menu entries
      */
     public static void menu(String name, String... entries) {
         println(name + COLON);
@@ -162,10 +162,10 @@ public class TUI {
     /**
      * choose a option from a list
      *
-     * @param <T>
-     * @param name
-     * @param list
-     * @return
+     * @param <T> Generic
+     * @param name Heading to prompt the user to choose an options
+     * @param list List of options
+     * @return Option the user chose
      */
     public static <T> T getSingleOption(String name, List<T> list) {
         println(name + COLON);
@@ -180,9 +180,9 @@ public class TUI {
     /**
      * Print all elements from a list
      *
-     * @param <T>
-     * @param list
-     * @return
+     * @param <T> Generic
+     * @param list List to print
+     * @return Generic
      */
     public static <T> List<T> printListEntries(List<T> list) {
         for (int i = 0; i < list.size(); i++) {
@@ -194,7 +194,7 @@ public class TUI {
     /**
      * Print all elements from an array
      *
-     * @param array
+     * @param array Array to print
      */
     public static void printArray(Object[] array) {
         for (Object array1 : array) {
@@ -205,10 +205,10 @@ public class TUI {
     /**
      * Choose multiple options from a list
      *
-     * @param <T>
-     * @param name
-     * @param list
-     * @return
+     * @param <T> Generic
+     * @param name Heading to prompt the user to select an item
+     * @param list list of all option items
+     * @return List of selected Items
      */
     public static <T> List<T> getMultiOption(String name, List<T> list) {
         println(name + COLON);
@@ -228,7 +228,7 @@ public class TUI {
     /**
      * read a Date input
      *
-     * @return
+     * @return read in date
      */
     public static LocalDate readDate() {
         String line = readLine();
